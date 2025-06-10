@@ -1,0 +1,627 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1{
+    background-color: #3d664b;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-family: 'Mynerve', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-tabler {
+    position: fixed;
+    z-index: 2;
+    font-size: 20px;
+    right: 4%;
+    bottom: 5%;
+    color: #417460;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-tabler:hover {
+    opacity: .75;
+    transform: scale(1.1);
+}
+
+.oculto {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#whatsapp{
+    position: fixed;
+    opacity: 0.75;
+    right: 3%;
+    bottom: 12%;
+    z-index: 2;
+}
+
+#whatsapp:hover{
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+/* Estilos específicos para la barra de navegación */
+
+header {
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #497558;
+}
+
+.navbar {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.95;    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav-list {
+    position: absolute;
+    top: 89px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    opacity: 0.95;
+    background-color: #4c5039;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.nav-list li {
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #daa916;
+    font-weight: bold;
+    transition: 0.7s ease;
+    font-family: "bhlingglers", sans-serif;
+}
+
+.nav-item a:hover {
+    color: #5d8b73  ;
+}
+
+#menu-check {
+    display: none;
+}
+
+#menu-check:not(:checked) ~ .nav-list {
+    display: none;
+}
+
+#menu-check:checked ~ .nav-list {
+    display: flex;
+}
+
+#menu-check:checked ~ label #menu-abrir {
+    display: none;
+}
+
+#menu-check:checked ~ label #menu-cerrar {
+    display: block;
+    font-size: 1.8rem;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #329e63;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 2px solid #2b9267;
+    border-radius: 5px;
+    position: absolute;
+    right: 16px;
+    top: 24px;
+    width: 45px;
+    height: 42px;
+    padding: 0.3rem 0.6rem;
+    z-index: 2;
+}
+
+#menu:hover {
+    color: #3d8368;
+    cursor: pointer;
+    border-color: #3d8368;
+}
+
+#menu-cerrar {
+    display: none;
+}
+
+
+
+/* Estilos específicos para la sección de inicio */
+
+.inicio-container {
+    padding: 5px 10%;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    row-gap: 2rem;
+    align-items: center;
+    background-image: url('./images/hilera.webp'); /* Asegúrate de que la ruta sea correcta */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    color: white; /* Cambia el color del texto si es necesario */
+}
+
+
+.inicio-img img {
+    width: 400px;
+}
+
+.inicio-descripcion {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.inicio-titulo {
+    font-size: 4rem;
+    color: #84c59a;
+    letter-spacing: 5px ;
+    font-family: "Kotra", sans-serif;
+    text-shadow: 5px 5px 2px rgba(33, 4, 76, 0.6);
+}
+
+.inicio-link {
+    text-decoration: none;
+    background-color: #7ba0be;
+    color: #f9f9f9;
+    padding: 0.8rem 2rem;
+    align-self: flex-start;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
+}
+
+.inicio-link:hover {
+    background-color: #5d8b73;
+}
+
+
+/* Estilos para main & slider */
+
+main{
+    width: 800px;
+    max-width: 100%;
+    padding: 2em;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+main .slider-container{
+    width: 400%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2em;
+
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+main img{
+    width: calc(100%/4 - 2em);
+    height: 500px;
+}
+
+main .slider-puntos{
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.5em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para la sección de productos */
+
+#productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    background-color: rgba(95, 191, 201, 0.1);
+}
+
+.zapatos-container {
+    width: 1080px;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 4rem 2rem;
+    padding: 4rem 0;
+}
+
+.zapato {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.zapato img {
+    width: 100%;
+    height: 400px;
+}
+
+.zapato h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.zapato h3 a{
+    text-decoration: none;
+    color: #207962;
+}
+
+.zapato h3 a:hover{
+    color: #5FBFC9;
+}
+
+.zapato .descripcion {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.zapato .precio {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#productos a.linkMl {
+    max-width: 50%;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #879cad;
+    color: #fff;
+    border: none;
+}
+
+#productos a.linkMl:hover{
+    background-color: #5d8b73;
+}
+
+/* Estilos para la sección de Nosotros */
+
+#nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    background-color: rgba(252, 206, 32, 0.1)
+}
+
+.nosotros-container{
+    width: 1080px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 2rem 0 4rem 0;
+}
+
+.historia p {
+    margin-top: 1.5rem;
+    line-height: 2;
+    text-wrap: balance;
+}
+
+.comentarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem 2rem;
+    max-width: 90%;
+}
+
+.tarjeta-comentario {
+    display: flex;
+    width: auto;
+    max-width: 350px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.tarjeta-comentario img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.tarjeta-comentario .contenido {
+    flex: 1;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tarjeta-comentario h4 {
+    margin-top: 0;
+}
+
+.tarjeta-comentario p {
+    margin-bottom: 5px;
+}
+
+.tarjeta-comentario .puntuacion {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para la sección de redes */
+#redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0 4rem 0;
+    background-color: rgba(252, 206, 32, 0.1);
+
+    overflow: hidden;
+}
+
+iframe{
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+
+/* Estilos específicos para la sección de contacto */
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    background-color: rgba(233, 105, 76, 0.1);
+}
+
+form, .subtitulo {
+    width: 450px;
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: none;
+    border: 0.8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+#contactForm .imagen{
+    display: flex;
+    align-items: first baseline;
+    padding: 0.5rem 0;
+}
+
+#contactForm button {
+    width: 40%;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #356e57;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contactForm button:hover{
+    background-color: #5a9c83;
+}
+
+#contactForm span {
+    color: #E96A4C;
+    font-weight: bold;
+}
+
+/* Estilos para la seccion footer */
+
+.bottom-bar{
+    background-color: #5d8b73;
+    height: 30px;
+}
+
+footer {
+    background-color: #497558;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer-links{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+.disclaimer p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+    /* Estilos para tablets */
+
+
+    #menu, #menu-check {
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        padding-top: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: static;
+        
+    }
+
+    #menu-check:not(:checked) ~ .nav-list {
+        display: flex;
+        padding: 0;
+    }
+
+    #menu-check:checked ~ .nav-list {
+        display: none;
+    }
+
+    .comentarios{
+        max-width: 80%;
+    }
+
+    .historia{
+        max-width: 600px;
+    }
+
+
+    #contacto{
+        background-image: url('./images/cooltext484271367556672.webp');
+        background-repeat: no-repeat;
+        background-position: right 80%;;
+        background-size: auto;
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    /* Estilos para escritorio */
+    .icon-tabler{
+        right: 20px;
+    }
+
+    #whatsapp{
+        right: 5%;
+        bottom: 10%;
+        opacity: 1;
+    }
+
+    .historia{
+        max-width: 800px;
+    }
+
+    .comentarios{
+        max-width: 1240px;
+    }
+
+    #contacto{
+        padding: 4rem;
+    }
+}
